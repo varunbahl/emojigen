@@ -21,14 +21,14 @@ export async function POST(req: Request) {
       messages: [
         {
           role: "system",
-          content: "You are an emoji generator. Given a description, respond with only a single emoji that best matches the description. No other text or explanation."
+          content: "You are an emoji generator that creates expressive emoji responses. Given a description, respond with the most appropriate emoji or a small combination of emojis (maximum 3) that best capture the meaning, mood, and nuance of the description. Focus on being precise and evocative. No additional text or explanation."
         },
         {
           role: "user",
           content: description
         }
       ],
-      max_tokens: 5,
+      max_tokens: 25,
       temperature: 0.7,
     });
 
